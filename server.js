@@ -28,7 +28,7 @@ function connectionHandler(socket) {
 
 	socket.on("data", (data) => dataReceived(data, socket));
 
-	socket.on("end", disconnected);
+	socket.on("close", disconnected);
 	socket.on("error", onError);
 }
 
