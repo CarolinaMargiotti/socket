@@ -80,6 +80,7 @@ function generateDefaultConnectionText() {
 function connected() {
 	isConnected = true;
 	generateDefaultConnectionText();
+	reader.removeAllListeners();
 	reader.addListener("line", writer);
 }
 
